@@ -1,6 +1,7 @@
+let color = "black";
+
 document.addEventListener("DOMContentLoaded", function() {
     buildBoard(16);
-    console.log("Hello");
     let SelectGridSize = document.querySelector(".select");
     let message = document.querySelector("#msg");
     SelectGridSize.addEventListener("click", function() {
@@ -32,5 +33,19 @@ function buildBoard(size) {
 };
 
 function colorDiv(){
-	 
+    if(color == "random"){
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+    }
+    else{
+        this.style.backgroundColor = 'black';
+    }
+}
+
+function setColor(colorChoice){
+    color = colorChoice;
+}
+
+function resetBoard(){
+    let divs = document.querySelectorAll("div");
+    divs.forEach((div) => div.style.backgroundColor = "white");
 }

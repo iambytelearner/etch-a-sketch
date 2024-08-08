@@ -14,14 +14,14 @@
     <h1>Etch a Sketch</h1>
     <div class="header">
         <h3>Select the size</h3>
-        <button id="size" class="btn btn-black select">Select</button>
+        <button id="size" class="btn btn-dark select">Select</button>
     </div>
     <p id="msg"></p>
     <div class="board"></div>
     <div class="footer">
-        <button class="btn btn-danger">Black</button>
-        <button class="btn btn-success">Random</button>
-        <button class="btn btn-warning">Clear</button>
+        <button class="btn btn-danger" onclick="setColor('black')">Black</button>
+        <button class="btn btn-success" onclick="setColor('random')">Random</button>
+        <button class="btn btn-warning" onclick="resetBoard()">Clear</button>
     </div>
 </body>
 
